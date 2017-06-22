@@ -1,3 +1,9 @@
+/*
+font-family: 'Lobster', cursive;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Spectral', serif;
+*/
+
 @mixin tablet() {
 	@media screen and (min-width: 700px) {
 		@content;
@@ -12,7 +18,7 @@
 
 .slide {
 	color: white;
-	min-height: 100vh;
+	min-height: 80vh;
 	padding: 20px;
 	text-align: center;
 
@@ -39,8 +45,30 @@
 	@include tablet {
 		padding: 40px;
 	}
+
+	a {
+		color: white;
+	}
 }
 
 .main-title {
+	font-family: 'Lobster', cursive;
 	font-size: 50px;
+	margin-top: calc(40vh - 100px);
+}
+
+.dates, .where {
+	margin-top: 20px;
+}
+
+.section-title {
+	font-family: 'Spectral', serif;
+	font-size: 30px;
+	line-height: 1.3em;
+	margin-top: calc(30vh - 50px);
+}
+
+.copy {
+	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
 }

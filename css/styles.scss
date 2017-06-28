@@ -1,3 +1,5 @@
+$images: "../images/";
+
 /*
 font-family: 'Lobster', cursive;
 font-family: 'Open Sans', sans-serif;
@@ -17,10 +19,10 @@ font-family: 'Spectral', serif;
 }
 
 .slide {
+	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	color: white;
 	min-height: 80vh;
 	padding: 20px;
 	text-align: center;
@@ -40,7 +42,12 @@ font-family: 'Spectral', serif;
 	}
 
 	&:nth-of-type(1) {
-		background-color: rgba(75, 29, 49, 0.82);
+		background-attachment: fixed;
+		background-color: black;
+		background-image: url($images + "bluestone-2015-dark.jpg");
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 
 	//&:nth-of-type(2) {
@@ -67,11 +74,21 @@ font-family: 'Spectral', serif;
 .main-title {
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
+	text-shadow: 0 0 5px black;
 	//margin-top: calc(40vh - 100px);
+
+	@include tablet() {
+		font-size: 70px;
+	}
 }
 
 .dates, .where {
 	margin-top: 20px;
+	text-shadow: 0 0 5px black;
+
+	@include tablet() {
+		font-size: 30px;
+	}
 }
 
 .section-title {
@@ -82,6 +99,6 @@ font-family: 'Spectral', serif;
 }
 
 .copy {
-	margin-top: 20px;
 	font-family: 'Open Sans', sans-serif;
+	margin-top: 20px;
 }
